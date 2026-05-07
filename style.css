@@ -1,0 +1,86 @@
+/* =========================================================
+}
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+button {
+    width: 220px;
+
+    margin: 10px auto;
+    padding: 14px 18px;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    background-color: rgb(56, 189, 248);
+    color: rgb(15, 23, 42);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: rgb(125, 211, 252);
+
+    transform: scale(1.03);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================================
+   PÁGINA INDEX
+========================================================= */
+
+.pagina-index {
+    min-height: 100vh;
+
+    background-image: url(JogoMagoTela.png);
+}
+
+.pagina-index div {
+    margin-top: 40px;
+}
+
+.pagina-index button {
+    width: 260px;
+
+    padding: 24px;
+
+    font-size: 22px;
+
+    background-color: rgba(15, 23, 42, 0.88);
+    color: white;
+
+    border: 1px solid rgb(56, 189, 248);
+}
+
+.pagina-index button:hover {
+    background-color: rgb(56, 189, 248);
+    color: rgb(15, 23, 42);
+}
+
+/* =========================================================
+   PÁGINA PERSONAGEM
+========================================================= */
+
+.pagina-personagem {
+    min-height: 100vh;
+
+    background-image: url(JogoMagoTelaPersonagem.png);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 30px auto;
+    padding: 2
+}
