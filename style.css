@@ -1,34 +1,17 @@
 /* =========================================================
-}
-
-/* =========================================================
-   BOTÕES
+   CONFIGURAÇÕES GERAIS - Usadas em todas as páginas
 ========================================================= */
 
-button {
-    width: 220px;
-
-    margin: 10px auto;
-    padding: 14px 18px;
-
-    border: none;
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    background-color: rgb(56, 189, 248);
-    color: rgb(15, 23, 42);
-
-    transition: 0.3s;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-button:hover {
-    background-color: rgb(125, 211, 252);
-
-    transform: scale(1.03);
+body {
+    background-color: rgb(244, 239, 230);
+    color: rgb(47, 93, 80);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -36,51 +19,436 @@ a {
 }
 
 /* =========================================================
-   PÁGINA INDEX
+   CABEÇALHO GERAL - Usado no index, serviços e contatos
 ========================================================= */
 
-.pagina-index {
-    min-height: 100vh;
-
-    background-image: url(JogoMagoTela.png);
+.cabecalho {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 22px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
 }
 
-.pagina-index div {
-    margin-top: 40px;
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.pagina-index button {
-    width: 260px;
-
-    padding: 24px;
-
-    font-size: 22px;
-
-    background-color: rgba(15, 23, 42, 0.88);
-    color: white;
-
-    border: 1px solid rgb(56, 189, 248);
+.logo-imagem {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
 }
 
-.pagina-index button:hover {
-    background-color: rgb(56, 189, 248);
-    color: rgb(15, 23, 42);
+.logo-texto h1 {
+    font-size: 24px;
+    color: rgb(47, 93, 80);
+}
+
+.logo-texto p {
+    font-size: 13px;
+    color: rgb(94, 139, 126);
+}
+
+.menu {
+    display: flex;
+    gap: 34px;
+}
+
+.menu a {
+    color: rgb(94, 139, 126);
+    font-size: 15px;
+    font-weight: 500;
 }
 
 /* =========================================================
-   PÁGINA PERSONAGEM
+   RODAPÉ GERAL - Usado no index, serviços e contatos
 ========================================================= */
 
-.pagina-personagem {
-    min-height: 100vh;
-
-    background-image: url(JogoMagoTelaPersonagem.png);
+.rodape {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 48px 50px 28px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    background-color: rgb(47, 93, 80);
+    color: rgb(255, 255, 255);
 }
 
-.container {
-    width: 90%;
-    max-width: 1100px;
+.rodape-logo {
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: bold;
+}
 
-    margin: 30px auto;
-    padding: 2
+.rodape-coluna h3 {
+    margin-bottom: 14px;
+    font-size: 18px;
+}
+
+.rodape-coluna p {
+    margin-bottom: 8px;
+    color: rgb(220, 232, 220);
+    font-size: 14px;
+}
+
+.redes {
+    display: flex;
+    gap: 12px;
+}
+
+.redes span, .redes-contato span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.redes span {
+    width: 36px;
+    height: 36px;
+    background-color: rgb(94, 139, 126);
+}
+
+.copyright {
+    grid-column: 1 / 4;
+    margin-top: 24px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+    color: rgb(220, 232, 220);
+    font-size: 13px;
+}
+
+/* =========================================================
+   BOTÕES GERAIS - Base visual para botões em formato de link
+========================================================= */
+
+.botao-principal, .botao-servicos {
+    display: inline-block;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* =========================================================
+   PÁGINA INDEX - Banner principal e seção Quem Somos
+========================================================= */
+
+.banner-principal {
+    position: relative;
+    max-width: 1180px;
+    height: 520px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.imagem-fundo {
+    position: absolute;
+    inset: 0;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagem-fundo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(47, 93, 80, 0.48);
+}
+
+.banner-conteudo {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    padding: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.banner-conteudo h2 {
+    margin-bottom: 24px;
+    font-size: 58px;
+    line-height: 1.15;
+}
+
+.banner-conteudo p {
+    max-width: 760px;
+    margin: 0 auto 32px;
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+.botao-principal {
+    padding: 18px 48px;
+    background-color: rgb(167, 196, 160);
+    color: rgb(47, 93, 80);
+}
+
+.botao-principal:hover {
+    background-color: rgb(244, 239, 230);
+}
+
+.quem-somos {
+    max-width: 850px;
+    margin: 90px auto 70px;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.quem-somos h2 {
+    margin-bottom: 22px;
+    font-size: 32px;
+}
+
+.quem-somos p {
+    margin-bottom: 12px;
+    color: rgb(94, 139, 126);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   BANNERS INTERNOS - Usados nas páginas Serviços e Contatos
+========================================================= */
+
+.banner-servicos, .banner-contato {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 70px 30px;
+    background: linear-gradient(90deg, rgb(47, 93, 80), rgb(94, 139, 126));
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.banner-servicos h2, .banner-contato h2 {
+    margin-bottom: 16px;
+    font-size: 42px;
+}
+
+.banner-servicos p, .banner-contato p {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   PÁGINA SERVIÇOS - Cards com os serviços oferecidos
+========================================================= */
+
+.botao-servicos {
+    padding: 16px 42px;
+    background-color: rgb(47, 93, 80);
+    color: rgb(255, 255, 255);
+}
+
+.botao-servicos:hover {
+    background-color: rgb(94, 139, 126);
+}
+
+.servicos-principal {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 70px;
+    background-color: rgb(255, 255, 255);
+}
+
+.grade-servicos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+}
+
+.card-servico {
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(47, 93, 80, 0.12);
+}
+
+.imagem-servico {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    background-color: rgb(167, 196, 160);
+}
+
+.imagem-servico img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.conteudo-servico {
+    position: relative;
+    padding: 34px 24px 26px;
+}
+
+.icone-servico {
+    position: absolute;
+    top: -24px;
+    left: 24px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(167, 196, 160);
+    color: rgb(47, 93, 80);
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.card-servico h3 {
+    margin-bottom: 12px;
+    color: rgb(47, 93, 80);
+    font-size: 19px;
+}
+
+.card-servico p {
+    color: rgb(94, 139, 126);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   PÁGINA CONTATOS - Informações de contato e formulário
+========================================================= */
+
+.contato-principal {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 70px;
+    background-color: rgb(255, 255, 255);
+}
+
+.informacoes-contato h2 {
+    margin-bottom: 30px;
+    color: rgb(47, 93, 80);
+    font-size: 28px;
+}
+
+.item-contato {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.icone-contato {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(167, 196, 160);
+    color: rgb(47, 93, 80);
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.item-contato h3, .titulo-redes-contato {
+    color: rgb(47, 93, 80);
+}
+
+.item-contato h3 {
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+.item-contato p {
+    color: rgb(94, 139, 126);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.titulo-redes-contato {
+    margin: 30px 0 14px;
+    font-size: 18px;
+}
+
+.redes-contato {
+    display: flex;
+    gap: 12px;
+}
+
+.redes-contato span {
+    width: 38px;
+    height: 38px;
+    background-color: rgb(47, 93, 80);
+    color: rgb(255, 255, 255);
+}
+
+.formulario-contato {
+    padding: 35px;
+    background-color: rgb(234, 227, 218);
+    border-radius: 14px;
+}
+
+.formulario-contato h2 {
+    margin-bottom: 24px;
+    color: rgb(47, 93, 80);
+    font-size: 24px;
+}
+
+.formulario-contato form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contato label {
+    margin-bottom: 6px;
+    color: rgb(47, 93, 80);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.formulario-contato input, .formulario-contato textarea {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    color: rgb(47, 93, 80);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.formulario-contato textarea {
+    height: 140px;
+    resize: none;
+}
+
+.formulario-contato button {
+    padding: 15px;
+    background-color: rgb(47, 93, 80);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formulario-contato button:hover {
+    background-color: rgb(94, 139, 126);
 }
